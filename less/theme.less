@@ -1,0 +1,190 @@
+// -----------------------------
+// Beta Studio: CSS > theme.less
+// -----------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #Page Container
+// 2. #Header & Footer
+// 3. #Forms (General)
+// 4. #Forms (Widgets)
+
+
+// -----------------------------
+// #1. Page Settings
+// -----------------------------
+
+// Page Container
+// --------------
+
+.container {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px; // 1140px - 10% for margins
+		margin: 0 auto;
+	}
+}
+
+
+// Zone Content
+// ------------
+
+.zone-content {
+	margin: 50px 0;
+}
+
+
+
+
+// -----------------------------
+// 2. #Header & Footer
+// -----------------------------
+
+.theme-header,
+.theme-footer {
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+	padding: 60px 0;
+	background-color: @spare-color;
+	text-align: center;
+	// Tablet: reduce height
+	@media @tablet {
+		padding: 40px 0;
+	}
+}
+
+
+// Footer
+// ----------
+
+.theme-footer {
+	background-color: @button-color;
+	// Change heading elements to white
+	h1, h2, h3, h4 {
+		color: @bg-color;
+	}
+	// Lighten paragraph & link elements
+	p, a {
+		color: lighten(@button-color,40%);
+	}
+	// Reset Twitter feed styles
+	.twitter-feed {
+		padding: 0;
+		background-color: transparent;
+	}
+}
+
+
+
+
+// -----------------------------
+// 3. #Forms (General)
+// -----------------------------
+
+// Form
+// ----------
+
+form,
+.form {
+	background-color: @bg-color-alt;
+}
+
+// Form Body
+.form-body {
+	margin: 30px;
+	@media @mobile {
+		margin: 20px;
+	}
+}
+
+// Form Group
+.form-group {
+	margin-bottom: 20px;
+	@media @mobile {
+		margin-bottom: 10px;
+	}
+}
+
+
+// Legend
+// ----------
+
+legend {
+	width: 100%;
+	padding: 10px 30px;
+	background-color: darken(@color-swatch1,9%);
+	border-bottom: 1px solid darken(@color-swatch1,12%);
+	color: @color-swatch3;
+	@media @mobile {
+		padding: 6px 20px;
+	}
+}
+
+// Select
+// ----------
+
+select {
+    height: 36px;
+    outline: none;
+    border: 1px solid darken(@color-swatch1,10%);
+    border-radius: 0;
+    background-color: @color-swatch1;
+    font-size: 12px;
+    text-indent: 0;
+    &:hover, &:focus {
+        background-color: @color-swatch1;
+        cursor: pointer;
+	}
+}
+
+
+// Inputs: Text
+// ------------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+	padding: 14px 10px;
+	border: 1px solid darken(@color-swatch1,8%);
+	&:focus {
+		border-color: lighten(@color-swatch7,10%);
+		box-shadow: none;
+	}
+}
+
+
+
+
+// -----------------------------
+// 4. #Forms (Widgets)
+// -----------------------------
+
+// Contact, Sign Up, Blog Search Forms
+// -----------------------------------
+
+// Form Group
+.signupform,
+.blogsearch {
+	.form-group {
+		margin-bottom: 0;
+		&:first-child {
+			-ms-flex: 0 11 100%;
+			-webkit-flex: 0 11 100%;
+			flex: 0 11 100%;
+			margin-right: 10px;
+		}
+	}
+	.form-body {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.label {
+		display: none;
+	}
+}

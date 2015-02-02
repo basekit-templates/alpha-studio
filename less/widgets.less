@@ -1,0 +1,561 @@
+// -----------------------------
+// Beta Studio: CSS > Widgets
+// -----------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Logo
+//  2.   #Company Name
+//  3.   #Navigation
+//  4.   #Feature
+
+//  5.   #Buttons
+//  5.1  -- #Standard
+//  5.2  -- #Tweet
+//  5.3  -- #Dropbox
+//  5.4  -- #Click To Call
+//  5.5  -- #Paypal
+
+//  6.   #Image
+//  7.   #Gallery
+//  8.   #Slideshow
+
+//  9.   #Contact Form
+// 10.   #Signup Form
+
+// 11.   #Social Icons
+// 12.   #Twitter Feed
+
+// 13.   #Divider (Keyline)
+// 14.   #Profile
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+// No styles
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+.company-link {
+	position: relative;
+
+	&:hover {
+		text-decoration: none;
+		&:after {
+			text-decoration: none;
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: @font-swatch10-color;
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition:    opacity 0.3s, -moz-transform 0.3s;
+		transition:         opacity 0.3s, transform 0.3s;
+		-webkit-transform: translateY(10px);
+		-moz-transform:    translateY(10px);
+		transform:         translateY(10px);
+	}
+
+	// Remove border at mobile
+	@media @mobile {
+		border-bottom: 0;
+	}
+}
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+// See 'navigation.less'
+
+
+
+
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+// Main Feature
+// ------------
+
+.feature {
+	text-align: center;
+
+	// Background Image
+	.background-image {
+		.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+		min-height: 450px;
+	}
+
+	// Content Wrap
+	.content-wrap {
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 50px;
+	}
+
+	// Headline / Strapline
+	.headline,
+	.strapline {
+		text-shadow: 0 0 6px rgba(0,0,0,0.2);
+	}
+
+	// Button
+	.button {
+		display: inline-block;
+		margin: 20px 0 0;
+		box-shadow: 0 0 0 2px rgba(110,110,110,0.3);
+	}
+
+}
+
+
+
+
+// -----------------------------
+// 5.  #Buttons
+// -----------------------------
+
+//  5.1  #Standard
+//  --------------
+
+button,
+.button {
+	padding: 11px 16px;
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+// 5.3  #Dropbox
+// -------------
+
+.dropbox .button {
+	margin-right: 10px;
+}
+
+
+
+
+// -----------------------------
+// 6. #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+	color: @color-swatch1;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size,50%);
+	}
+}
+
+
+// Image Widget
+// ------------
+
+.imagewidget {
+	.image-title,
+	.image-description {
+		color: @font-swatch5-color;
+		text-shadow: none;
+	}
+}
+
+
+
+
+// -----------------------------
+// 7.  #Gallery
+// -----------------------------
+
+.gallery {
+
+	// Gallery Layout
+	// --------------
+
+	// Gallery List
+	.gallery-list {
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    -webkit-box-pack: justify;
+	    -moz-box-pack: justify;
+	    -webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	    justify-content: space-between;
+	}
+
+	// Gallery Item
+	.gallery-item {
+	    position: relative;
+	    width: 32%;
+	    margin-bottom: 2%;
+	    // Display 100% at mobile
+	    @media @mobile {
+	        width: 100%;
+	        margin-bottom: 4%;
+	    }
+	}
+
+	// Use Background Image Method
+	.image-link {
+	    display: block;
+	    height: 280px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	    @media @tablet {
+	        height: 210px;
+	    }
+	}
+	// Hide Img Element
+	.image {
+		display: none;
+	}
+
+
+	// Image Captions
+	// --------------
+
+	// Hide caption
+	.caption {
+		display: none;
+		margin: 0;
+		padding: 20px;
+		background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
+	}
+	// Show caption
+	.figure:hover .caption {
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	// Image Title
+	.image-title {
+		display: inline-block;
+		margin-bottom: 16px;
+		padding-bottom: 3px;
+		border-bottom: 2px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.5); 
+	}
+}
+
+
+
+
+// -----------------------------
+// 8.  #Slideshow
+// -----------------------------
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.responsiveslideshow,
+.responsiveslideshow .figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow {
+	.figure {
+	    background-size: cover;
+	    background-position: center;
+	}
+	.responsiveslideshow .image {
+	    display: none; // Hide Img Element
+	}
+}
+
+
+// Slideshow Controls
+// ------------------
+
+// Naviation Buttons
+.slide-navigation {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+
+	// Button Text
+	.control-text {
+		display: none;
+	}
+}
+
+// Prev, Next, Pause Buttons
+.previous-button,
+.next-button,
+.pause-toggle {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	background-color: hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3), 0.7);
+	// Removes margin-right for icons
+	&:before {
+		margin-right: 0;
+	}
+}
+
+
+// Slideshow Pagination
+// --------------------
+
+.slide-pagination {
+
+	// Pagination List
+	.pagination-list {
+		margin: 20px 0 0;
+		text-align: right;
+	}
+
+	// Pagination Item
+	.pagination-item {
+		margin: 0 2px;
+	}
+
+	// Pagination Button
+	.button--pagination {
+		width: 15px;
+		height: 15px;
+		padding: 0;
+		background-color: @color-swatch3;
+		border-radius: 50%;
+		text-indent: -9999px;
+	}
+
+	// Pagination Selected Item
+	.pagination-item.selected .button--pagination {
+	    background-color: @color-swatch7;
+	}
+}
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+// See 'theme.less > 4. #Forms (General)'
+
+
+
+
+// -----------------------------
+// 10. #Signup Form
+// -----------------------------
+
+// See 'theme.less > 4. #Forms (Widgets)'
+
+
+
+
+// -----------------------------
+// 11. #Social Icons
+// -----------------------------
+
+// Item Link
+.social-link {
+	font-size: 18px;
+	&:hover {
+		color: @color-swatch7;
+		text-decoration: none;
+	}
+}
+
+// Hide Social name
+.social-name {
+	display: none;
+}
+
+
+
+
+// -----------------------------
+// 12. #Twitter Feed
+// -----------------------------
+
+// Twitter
+// ----------
+
+.twitter-feed {
+	padding: 30px;
+	background-color: darken(@color-swatch1,5%);
+	@media @mobile {
+		padding: 20px;
+	}
+}
+
+
+// Tweet Item
+// ----------
+
+.tweet-item {
+	padding: 30px;
+	background-color: @bg-color-alt;
+	@media @mobile {
+		padding: 20px;
+	}
+}
+
+
+// Avatar & Tweet Wrap
+// -------------------
+
+// Avatar
+.avatar {
+	width: 11%;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+// Tweet Wrap
+.tweet-wrap {
+	width: 85%;
+	padding: 30px;
+	background-color: @bg-color;
+}
+
+// Both
+.avatar,
+.tweet-wrap {
+	display: inline-block; // Display element inline
+	vertical-align: top;
+	@media @mobile {
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+
+// Tweet Content
+// -------------
+
+.tweet-content {
+	display: block;
+	margin: 20px 0 0;
+}
+
+
+// Account Link (Username)
+// -----------------------
+
+.account-link {
+	padding-bottom: 3px;
+	border-bottom: 2px solid @color-swatch7;
+	.paragraph; // Apply 'Paragraph' mixin
+	color: @color-swatch7;
+	&:hover {
+		border-color: @color-swatch3;
+		color: @color-swatch3;
+		text-decoration: none;
+	}
+}
+
+
+// Tweet Metadata
+// --------------
+
+.tweet-metadata {
+	font-size: 12px;
+	color: lighten(@font-swatch5-color,10%);
+}
+
+
+
+
+// -----------------------------
+// 13. #Divider (Line)
+// -----------------------------
+
+hr.rule {
+    background-color: darken(@bg-color-alt,5%);
+}
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+// Profile Resets
+// --------------
+
+// Reset Twitter feed styles
+.profile .twitter {
+	padding: 0;
+	background-color: transparent;
+	.tweet-item {
+		padding: 0;
+		background-color: transparent;
+	}
+	.tweet-wrap {
+		padding: 0;
+		background-color: transparent;
+	}
+	.avatar {
+		display: none;
+	}
+}
+
+// Reset Signup form styles
+.profile .signupform {
+	.form {
+		background-color: transparent;
+	}
+	.form-body {
+		margin: 10px 0 0;
+	}
+	.legend {
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+	}
+	.input--email {
+		background-color: @bg-color-alt;
+	}
+}
+
+

@@ -1,0 +1,40 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Default Page Content -->
+<div class="content">
+
+	<div class="default-page">
+
+		{% include "includes/header.twig" %}
+
+		<!-- Navigation Bar -->
+		<div class="navigation-bar">
+
+			<div class="container">
+				{{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+			</div>
+
+		</div>
+
+		<!-- Zone Content -->
+		<div class="zone-content">
+
+			<div class="container">
+				<!-- Main Widet Zone -->
+		   		{{zone('main')|raw}}
+			</div>
+
+		</div>
+
+		<!-- End Zone Content -->
+
+	   {% include "includes/footer.twig" %}
+
+	</div>
+
+<!-- End Default Page Content -->
+</div>
+
+{% endblock %}
