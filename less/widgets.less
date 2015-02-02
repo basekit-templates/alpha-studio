@@ -112,14 +112,19 @@
 
 	// Content Wrap
 	.content-wrap {
-		width: 90%;
-		margin: 0 auto;
-		padding: 50px 0;
 		position: relative;
-		bottom: 0;
+		width: 90%;
 		max-width: 960px;
+		margin: 0 auto;
+		padding: 20px 0;
+		bottom: 0;
 		z-index: 1;
-		margin-top: 10%;
+		margin-top: 20%;
+
+		// Settings for full height backdrop at mobile
+		@media @mobile {
+			margin-top: 0;
+		}
 
 		// Transparent Background
 		&:after {
@@ -137,8 +142,9 @@
 
 	// Feature Title and Strapline
 	.headline,
-	.strapline{
+	.strapline {
 		width: 70%;
+		padding: 0;
 		color: @bg-color;
 		text-shadow: 0 0 6px rgba(0,0,0,0.2);
 
@@ -146,6 +152,14 @@
 			width: 100%;
 		}
 	}
+
+	// Settings for full height backdrop at mobile
+	.headline {
+		@media @mobile {
+			margin-top: 20%;
+		}
+	}
+
 
 	// Button
 	.button {
@@ -159,12 +173,16 @@
 		@media @tablet {
 			position: relative;
 			transform: translate(0%, 0%);
+			.button-style-alt;
+		}
+
+		// Settings for full height backdrop at mobile
+		@media @mobile {
+			margin-bottom: 20%;
 		}
 	}
 
 }
-
-
 
 
 // -----------------------------
