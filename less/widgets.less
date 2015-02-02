@@ -101,33 +101,65 @@
 // ------------
 
 .feature {
-	text-align: center;
+	text-align: left;
 
 	// Background Image
 	.background-image {
 		.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
-		min-height: 450px;
+		background-size: cover;
+		overflow: hidden;
 	}
 
 	// Content Wrap
 	.content-wrap {
-		width: 100%;
-		max-width: 960px;
+		width: 90%;
 		margin: 0 auto;
-		padding: 50px;
+		padding: 50px 0;
+		position: relative;
+		bottom: 0;
+		max-width: 960px;
+		z-index: 1;
+		margin-top: 10%;
+
+		// Transparent Background
+		&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1000%;
+		background-color: fade(@bg-color-alt-2,60%);
+		left: -50%;
+		right: 0;
+		z-index: -1;
+		}
 	}
 
-	// Headline / Strapline
+	// Feature Title and Strapline
 	.headline,
-	.strapline {
+	.strapline{
+		width: 70%;
+		color: @bg-color;
 		text-shadow: 0 0 6px rgba(0,0,0,0.2);
+
+		@media @tablet {
+			width: 100%;
+		}
 	}
 
 	// Button
 	.button {
-		display: inline-block;
+		position: absolute;
 		margin: 20px 0 0;
-		box-shadow: 0 0 0 2px rgba(110,110,110,0.3);
+		top: 50%;
+		right: 0;
+		transform: translate(-50%, -100%);
+
+		// Puts the button back to normal at tablet and mobile
+		@media @tablet {
+			position: relative;
+			transform: translate(0%, 0%);
+		}
 	}
 
 }
@@ -271,7 +303,7 @@ button,
 		display: inline-block;
 		margin-bottom: 16px;
 		padding-bottom: 3px;
-		border-bottom: 2px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.5); 
+		border-bottom: 2px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.5);
 	}
 }
 
