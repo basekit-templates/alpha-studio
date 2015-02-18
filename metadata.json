@@ -1,6 +1,6 @@
 {
-    "widgetVersion": 2,
     "name":"Alpha Studio",
+    "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "screenshot":"thumbnail.png",
     "templateType":"standard",
