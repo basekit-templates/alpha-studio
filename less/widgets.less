@@ -51,7 +51,6 @@
 	display: inline-block; // Fixes problem with the :after underline not being
 						   // inline when a long company name is entered
 
-
 	&:hover {
 		text-decoration: none;
 		&:after {
@@ -110,80 +109,64 @@
 
 	// Background Image
 	.background-image {
-		.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 		background-size: cover;
 		overflow: hidden;
+		min-height: 450px;
 	}
 
 	// Content Wrap
 	.content-wrap {
-		position: relative;
-		width: 90%;
-		max-width: 960px;
-		margin: 0 auto;
-		padding: 20px 0;
+		width: 100%;
+		position: absolute;
 		bottom: 0;
-		z-index: 1;
-		margin-top: 20%;
+		background-color: fade(@bg-color-alt-2,60%);
+		padding: 0;
 
-		// Settings for full height backdrop at mobile
+		// Full screen backdrop and centered text at mobile
 		@media @mobile {
-			margin-top: 0;
+			.flex-vert-center;
+			height: 100%
 		}
 
-		// Transparent Background
-		&:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		width: 1000%;
-		background-color: fade(@bg-color-alt-2,60%);
-		left: -50%;
-		right: 0;
-		z-index: -1;
+
+		.content-inner-wrap {
+			width: 90%;
+		    margin: 0 5%;
+		    @media only screen and (min-width: 1140px) {
+		    	width: 960px; // 1140px - 10% for margins
+				margin: 0 auto;
+			}
 		}
 	}
 
 	// Feature Title and Strapline
+
 	.headline,
 	.strapline {
 		width: 70%;
-		padding: 0;
+		float: left;
+		padding: 5px 0;
 		color: @bg-color;
 		text-shadow: 0 0 6px rgba(0,0,0,0.2);
 
 		@media @tablet {
 			width: 100%;
-		}
-	}
-
-	// Settings for full height backdrop at mobile
-	.headline {
-		@media @mobile {
-			margin-top: 20%;
+			float: none;
 		}
 	}
 
 
 	// Button
 	.button {
-		position: absolute;
-		margin: 20px 0 0;
-		top: 50%;
-		right: 0;
-		transform: translate(-50%, -100%);
+		transform: translate(0%,-50%);
+		float: right;
 
-		// Puts the button back to normal at tablet and mobile
+		// // Puts the button back to normal at tablet and mobile
 		@media @tablet {
-			position: relative;
+			float: none;
 			transform: translate(0%, 0%);
+			margin-bottom: 10px;
 			.button-style-alt;
-		}
-
-		// Settings for full height backdrop at mobile
-		@media @mobile {
-			margin-bottom: 20%;
 		}
 	}
 
