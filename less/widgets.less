@@ -48,6 +48,9 @@
 
 .company-link {
 	position: relative;
+	display: inline-block; // Fixes problem with the :after underline not being
+						   // inline when a long company name is entered
+
 
 	&:hover {
 		text-decoration: none;
