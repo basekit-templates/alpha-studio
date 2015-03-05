@@ -119,7 +119,7 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		background-color: fade(@bg-color-alt-2,60%);
+		background-color: fade(darken(@color-swatch1,90%),60%);
 		padding: 10px 0;
 		text-align: center;
 
@@ -460,7 +460,7 @@ button,
 
 .tweet-item {
 	padding: 30px;
-	background-color: @bg-color-alt;
+	background-color: darken(@color-swatch1,5%);
 	@media @mobile {
 		padding: 20px;
 	}
@@ -536,7 +536,7 @@ button,
 // -----------------------------
 
 hr.rule {
-    background-color: darken(@bg-color-alt,5%);
+    background-color: darken(darken(@color-swatch1,5%),5%);
 }
 
 
@@ -580,7 +580,7 @@ hr.rule {
 		background-color: transparent;
 	}
 	.input--email {
-		background-color: @bg-color-alt;
+		background-color: darken(@color-swatch1,5%);
 	}
 }
 
