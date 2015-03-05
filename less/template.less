@@ -1,5 +1,5 @@
 // ------------------------------
-// Beta Studio: CSS > theme.less
+// Beta Studio: CSS > template.less
 // ------------------------------
 
 
@@ -65,8 +65,8 @@
 // 2. #Header & Footer
 // ------------------------------
 
-.theme-header,
-.theme-footer {
+.template-header,
+.template-footer {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 	padding: 60px 0;
 	background-color: @spare-color;
@@ -81,15 +81,15 @@
 // Footer
 // ------------------------------
 
-.theme-footer {
-	background-color: @button-color;
+.template-footer {
+	background-color: @color-swatch3;
 	// Change heading elements to white
 	h1, h2, h3, h4 {
 		color: @bg-color;
 	}
 	// Lighten paragraph & link elements
 	p, a {
-		color: lighten(@button-color,40%);
+		color: lighten(@color-swatch3, 40%);
 	}
 	// Reset Twitter feed styles
 	.twitter-feed {
