@@ -120,12 +120,13 @@
 		position: absolute;
 		bottom: 0;
 		background-color: fade(@bg-color-alt-2,60%);
-		padding: 0;
+		padding: 10px 0;
+		text-align: center;
 
 		// Full screen backdrop and centered text at mobile
 		@media @mobile {
-			.flex-vert-center;
-			height: 100%
+			//.flex-vert-center;
+			//height: 100%
 		}
 
 
@@ -143,8 +144,8 @@
 
 	.headline,
 	.strapline {
-		width: 70%;
-		float: left;
+		//width: 70%;
+		//float: left;
 		padding: 5px 0;
 		color: @bg-color;
 		text-shadow: 0 0 6px rgba(0,0,0,0.2);
@@ -158,8 +159,8 @@
 
 	// Button
 	.button {
-		transform: translate(0%,-50%);
-		float: right;
+		//transform: translate(0%,-50%);
+		//float: right;
 
 		// // Puts the button back to normal at tablet and mobile
 		@media @tablet {
