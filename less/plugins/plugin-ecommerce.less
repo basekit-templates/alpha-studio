@@ -121,15 +121,25 @@
 
 // Product List
 .product-list {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 // Product Item
 .product-item {
     position: relative;
     width: 32%;
+    margin-right: 2%;
+    &:nth-of-type(3n) {
+        margin-right: 0;
+    }
     margin-bottom: 2%;
     // Display 100% at mobile
     @media @mobile {
