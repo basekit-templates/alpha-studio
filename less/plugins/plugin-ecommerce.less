@@ -152,11 +152,33 @@
     }
 }
 
+// Listing Order
+
+.listing-order {
+    clear: both;
+}
+
+// Product Listing Title
+// ---------------
+
+.ecomproductslist__listing-title {
+    float: left;
+    @media @tablet {
+        float: none;
+    }
+}
+
 
 // Product Filters
 // ---------------
 
 .product-filters {
+
+    // Fieldset
+
+    .ecomproductslist__fieldset--filters {
+        clear: both;
+    }
 
     // Form Group
     .form-group {
@@ -188,6 +210,36 @@
     .input--search {
         padding: 14px 10px;
         height: auto;
+    }
+}
+
+
+// Product Search
+// ---------------
+.ecomproductslist__fieldset--search {
+    background: @color-swatch1;
+    float: right;
+    padding-bottom: 10px;
+
+    @media @tablet {
+        float: none;
+    }
+
+    // Legend
+
+    .legend {
+        display: none;
+    }
+
+    // Form Body
+
+    .form-body {
+        margin: 0;
+    }
+
+    // Form Group
+    .form-group:last-child {
+        margin-right: 0;
     }
 }
 
