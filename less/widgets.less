@@ -48,6 +48,8 @@
 
 .company-link {
 	position: relative;
+	display: inline-block; // Fixes problem with the :after underline not being
+						   // inline when a long company name is entered
 
 	&:hover {
 		text-decoration: none;
@@ -107,80 +109,52 @@
 
 	// Background Image
 	.background-image {
-		.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 		background-size: cover;
 		overflow: hidden;
+		min-height: 450px;
 	}
 
 	// Content Wrap
 	.content-wrap {
-		position: relative;
-		width: 90%;
-		max-width: 960px;
-		margin: 0 auto;
-		padding: 20px 0;
-		bottom: 0;
-		z-index: 1;
-		margin-top: 20%;
-
-		// Settings for full height backdrop at mobile
-		@media @mobile {
-			margin-top: 0;
-		}
-
-		// Transparent Background
-		&:after {
-		content: "";
+		width: 100%;
 		position: absolute;
-		top: 0;
 		bottom: 0;
-		width: 1000%;
-		background-color: fade(@bg-color-alt-2,60%);
-		left: -50%;
-		right: 0;
-		z-index: -1;
+		background-color: fade(darken(@color-swatch1,90%),60%);
+		padding: 10px 0;
+		text-align: center;
+
+		.content-inner-wrap {
+			width: 90%;
+		    margin: 0 5%;
+		    @media only screen and (min-width: 1140px) {
+		    	width: 960px; // 1140px - 10% for margins
+				margin: 0 auto;
+			}
 		}
 	}
 
 	// Feature Title and Strapline
+
 	.headline,
 	.strapline {
-		width: 70%;
-		padding: 0;
-		color: @bg-color;
+		padding: 5px 0;
 		text-shadow: 0 0 6px rgba(0,0,0,0.2);
 
 		@media @tablet {
 			width: 100%;
-		}
-	}
-
-	// Settings for full height backdrop at mobile
-	.headline {
-		@media @mobile {
-			margin-top: 20%;
+			float: none;
 		}
 	}
 
 
 	// Button
 	.button {
-		position: absolute;
-		margin: 20px 0 0;
-		top: 50%;
-		right: 0;
-		transform: translate(-50%, -100%);
-
 		// Puts the button back to normal at tablet and mobile
 		@media @tablet {
-			position: relative;
+			float: none;
 			transform: translate(0%, 0%);
+			margin-bottom: 10px;
 			.button-style-alt;
-		}
-
-		// Settings for full height backdrop at mobile
-		@media @mobile {
-			margin-bottom: 20%;
 		}
 	}
 
@@ -197,6 +171,7 @@
 button,
 .button {
 	padding: 11px 16px;
+	cursor: pointer;
 	&:focus {
 		outline: 0;
 	}
@@ -226,7 +201,13 @@ button,
 	color: @color-swatch1;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 	@media @tablet {
-		font-size: bkscale(@font-swatch5-font-size,50%);
+		font-size: bkscale(@font-swatch5-font-size,0.75);
+	}
+}
+
+.caption-link {
+	&:hover {
+		text-decoration: none;
 	}
 }
 
@@ -445,7 +426,7 @@ button,
 // 9.  #Contact Form
 // -----------------------------
 
-// See 'theme.less > 4. #Forms (General)'
+// See 'template.less > 4. #Forms (General)'
 
 
 
@@ -454,7 +435,7 @@ button,
 // 10. #Signup Form
 // -----------------------------
 
-// See 'theme.less > 4. #Forms (Widgets)'
+// See 'template.less > 4. #Forms (Widgets)'
 
 
 
@@ -500,11 +481,8 @@ button,
 // ----------
 
 .tweet-item {
-	padding: 30px;
-	background-color: @bg-color-alt;
-	@media @mobile {
-		padding: 20px;
-	}
+	padding: 5px;
+	background-color: darken(@color-swatch1,5%);
 }
 
 
@@ -513,14 +491,15 @@ button,
 
 // Avatar
 .avatar {
-	width: 11%;
-	margin-right: 3%;
-	margin-bottom: 3%;
+	width: 10%;
+	margin-right: 1%;
+	margin-bottom: 2%;
+	float: left;
 }
 // Tweet Wrap
 .tweet-wrap {
-	width: 85%;
-	padding: 30px;
+	width: 89%;
+	padding: 15px 20px;
 	background-color: @bg-color;
 }
 
@@ -577,7 +556,7 @@ button,
 // -----------------------------
 
 hr.rule {
-    background-color: darken(@bg-color-alt,5%);
+    background-color: darken(darken(@color-swatch1,5%),5%);
 }
 
 
@@ -621,8 +600,15 @@ hr.rule {
 		background-color: transparent;
 	}
 	.input--email {
-		background-color: @bg-color-alt;
+		background-color: darken(@color-swatch1,5%);
 	}
 }
 
+// -----------------------------
+// 14. #Yelp Review
+// -----------------------------
 
+.review-list {
+	list-style: none;
+	margin: 0;
+}

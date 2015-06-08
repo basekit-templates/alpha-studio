@@ -1,5 +1,5 @@
 // ------------------------------
-// Beta Studio: CSS > theme.less
+// Beta Studio: CSS > template.less
 // ------------------------------
 
 
@@ -65,8 +65,8 @@
 // 2. #Header & Footer
 // ------------------------------
 
-.theme-header,
-.theme-footer {
+.template-header,
+.template-footer {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 	padding: 60px 0;
 	background-color: @spare-color;
@@ -81,21 +81,24 @@
 // Footer
 // ------------------------------
 
-.theme-footer {
-	background-color: @button-color;
+.template-footer {
+	// background-color: @color-swatch3;
 	// Change heading elements to white
 	h1, h2, h3, h4 {
 		color: @bg-color;
 	}
 	// Lighten paragraph & link elements
 	p, a {
-		color: lighten(@button-color,40%);
+		color: lighten(@color-swatch3, 40%);
 	}
 	// Reset Twitter feed styles
 	.twitter-feed {
 		padding: 0;
 		background-color: transparent;
 	}
+
+    // Adds spacing to all footer widgets
+    .widget { margin-bottom: 5px; }
 }
 
 
@@ -110,7 +113,17 @@
 
 form,
 .form {
-	background-color: @bg-color-alt;
+	background-color: darken(@color-swatch1,5%);
+}
+
+.contactform__fieldset,
+.widget__signupform .signupform__fieldset,
+.blogsearch__fieldset,
+.product-filters .fieldset--filters {
+    float: left;
+    width: 100%;
+    .clearfix;
+    background-color: darken(@color-swatch1,5%);
 }
 
 // Form Body
@@ -118,6 +131,25 @@ form,
 	margin: 30px;
 	@media @mobile {
 		margin: 20px;
+	}
+}
+
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+
+	// Form Body
+
+	.widget__signupform .form-body {
+		display: block;
+	}
+
+	// First Form Group
+
+	.widget__signupform .form-group:first-child {
+		margin-bottom: 10px;
+		margin-right: 0;
 	}
 }
 
@@ -190,13 +222,14 @@ textarea,
 
 // Form Group
 .signupform,
-.blogsearch {
+.blogsearch,
+.product-filters .fieldset--search {
 	.form-group {
 		margin-bottom: 0;
 		&:first-child {
-			-ms-flex: 0 11 100%;
-			-webkit-flex: 0 11 100%;
-			flex: 0 11 100%;
+			-ms-flex: 1 1 auto;
+			-webkit-flex: 1 1 auto;
+			flex: 1 1 auto;
 			margin-right: 10px;
 		}
 	}

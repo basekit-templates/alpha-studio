@@ -1,2 +1,2 @@
 # alpha-studio
-Standard BaseKit Theme: Alpha Studio
+Standard BaseKit Template: Alpha Studio
