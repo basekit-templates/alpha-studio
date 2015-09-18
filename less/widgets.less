@@ -104,6 +104,11 @@
 // Main Feature
 // ------------
 
+/*.template-feature {
+	margin: 0 auto;
+	width: 960px;
+}*/
+
 .feature {
 	text-align: left;
 
@@ -111,7 +116,12 @@
 	.background-image {
 		background-size: cover;
 		overflow: hidden;
-		min-height: 450px;
+		min-height: 420px;
+		max-height: 500px;
+		@media @tablet {
+			min-height: 250px;
+			max-height: 450px;
+		}
 	}
 
 	// Content Wrap
@@ -119,17 +129,13 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		background-color: fade(darken(@color-swatch1,90%),60%);
-		padding: 10px 0;
+		background-color: fade(darken(@color-swatch1,90%),10%);
+		padding: 10px 0 20px;
 		text-align: center;
 
 		.content-inner-wrap {
 			width: 90%;
 		    margin: 0 5%;
-		    @media only screen and (min-width: 1140px) {
-		    	width: 960px; // 1140px - 10% for margins
-				margin: 0 auto;
-			}
 		}
 	}
 
@@ -149,6 +155,7 @@
 
 	// Button
 	.button {
+		margin-top: 10px;
 		// Puts the button back to normal at tablet and mobile
 		@media @tablet {
 			float: none;
@@ -170,6 +177,7 @@
 
 button,
 .button {
+	font-size: 13px;
 	padding: 11px 16px;
 	cursor: pointer;
 	&:focus {
@@ -198,7 +206,7 @@ button,
 // Gallery & Slideshow
 .image-title,
 .image-description {
-	color: @color-swatch1;
+	color: @color-swatch4;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 	@media @tablet {
 		font-size: bkscale(@font-swatch5-font-size,0.75);
@@ -353,6 +361,9 @@ button,
 	.responsiveslideshow .image {
 	    display: none; // Hide Img Element
 	}
+	.caption {
+		background-color: darken(@color-swatch7, 8%);
+	}
 }
 
 
@@ -415,7 +426,7 @@ button,
 
 	// Pagination Selected Item
 	.pagination-item.selected .button--pagination {
-	    background-color: @color-swatch7;
+	    background-color: darken(@color-swatch3, 10%);
 	}
 }
 
@@ -448,7 +459,7 @@ button,
 .social-link {
 	font-size: 18px;
 	&:hover {
-		color: @color-swatch7;
+		color: darken(@color-swatch3, 10%);
 		text-decoration: none;
 	}
 }
@@ -470,7 +481,7 @@ button,
 
 .twitter-feed {
 	padding: 30px;
-	background-color: darken(@color-swatch1,5%);
+	background-color: darken(@color-swatch7,5%);
 	@media @mobile {
 		padding: 20px;
 	}
@@ -482,7 +493,7 @@ button,
 
 .tweet-item {
 	padding: 5px;
-	background-color: darken(@color-swatch1,5%);
+	background-color: darken(@color-swatch7,5%);
 }
 
 
@@ -500,7 +511,7 @@ button,
 .tweet-wrap {
 	width: 89%;
 	padding: 15px 20px;
-	background-color: @bg-color;
+	background-color: darken(@color-swatch7, 8%);
 }
 
 // Both
@@ -529,9 +540,9 @@ button,
 
 .account-link {
 	padding-bottom: 3px;
-	border-bottom: 2px solid @color-swatch7;
+	border-bottom: 2px solid @color-swatch4;
 	.paragraph; // Apply 'Paragraph' mixin
-	color: @color-swatch7;
+	color: @color-swatch4;
 	&:hover {
 		border-color: @color-swatch3;
 		color: @color-swatch3;
@@ -600,7 +611,7 @@ hr.rule {
 		background-color: transparent;
 	}
 	.input--email {
-		background-color: darken(@color-swatch1,5%);
+		background-color: @color-swatch1;
 	}
 }
 

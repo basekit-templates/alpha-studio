@@ -217,7 +217,7 @@
 // Product Search
 // ---------------
 .ecomproductslist__fieldset--search {
-    background: @color-swatch1;
+    background: transparent;
     float: right;
     padding-bottom: 10px;
 
@@ -328,7 +328,13 @@
     display: none;
 }
 
-
+.product-item-image, 
+.product-item-image .image-link, 
+.product-gallery .gallery-item, 
+.product-image .image-link, 
+.basket-item-image .image-link {
+    background-color: darken(@color-swatch7, 5%);
+}
 
 
 // -----------------------------

@@ -5,8 +5,6 @@
 <!-- Home Page Content -->
 <section class="page-content">
 
-	{% include "includes/header.twig" %}
-
 	<!-- Navigation Bar -->
 	<div class="navigation-bar">
 
@@ -16,7 +14,9 @@
 
 	</div>
 
-	{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true, "buttonText":"LOREM IPSUM"})|raw}}
+	<div class="template-feature">
+		{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true, "buttonText":"LOREM IPSUM"})|raw}}
+	</div>
 
 	<!-- Zone Content -->
 	<div class="zone-content">

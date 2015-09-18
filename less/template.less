@@ -17,16 +17,18 @@
 // #1. Page Settings
 // ------------------------------
 
+// Page Body
+// --------------
+
+body {
+	background-color: @color-swatch1;
+}
+
 // Page Container
 // --------------
 
 .container {
-    width: 90%;
-    margin: 0 5%;
-    @media only screen and (min-width: 1140px) {
-    	width: 960px; // 1140px - 10% for margins
-		margin: 0 auto;
-	}
+    margin: 0 2.5%;
 }
 
 
@@ -34,6 +36,10 @@
 // ------------------------------
 
 .page-content {
+	background-color: @color-swatch7;
+	-webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.1);
 	display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -45,6 +51,8 @@
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100vh;
+    margin: 30px auto;
+    max-width: 960px;
 }
 
 
@@ -53,6 +61,7 @@
 
 .zone-content {
 	margin: 50px 0;
+	padding: 0 20px;
 	-webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -68,13 +77,9 @@
 .template-header,
 .template-footer {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
-	padding: 60px 0;
-	background-color: @spare-color;
+	padding: 20px 0;
+	background-color: @contrast-color;
 	text-align: center;
-	// Tablet: reduce height
-	@media @tablet {
-		padding: 40px 0;
-	}
 }
 
 
@@ -113,7 +118,7 @@
 
 form,
 .form {
-	background-color: darken(@color-swatch1,5%);
+	background-color: darken(@color-swatch7, 5%);
 }
 
 .contactform__fieldset,
@@ -123,7 +128,7 @@ form,
     float: left;
     width: 100%;
     .clearfix;
-    background-color: darken(@color-swatch1,5%);
+    background-color: darken(@color-swatch7, 5%);
 }
 
 // Form Body
@@ -168,9 +173,9 @@ form,
 legend {
 	width: 100%;
 	padding: 10px 30px;
-	background-color: darken(@color-swatch1,9%);
+	background-color: @color-swatch3;
 	border-bottom: 1px solid darken(@color-swatch1,12%);
-	color: @color-swatch3;
+	color: lighten(@color-swatch3, 100%);
 	@media @mobile {
 		padding: 6px 20px;
 	}
@@ -205,7 +210,7 @@ textarea,
 	padding: 14px 10px;
 	border: 1px solid darken(@color-swatch1,8%);
 	&:focus {
-		border-color: lighten(@color-swatch7,10%);
+		border: 1px solid darken(@color-swatch1,12%);
 		box-shadow: none;
 	}
 }

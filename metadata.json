@@ -25,49 +25,49 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#ffffff",
+            "color1":"#ebebeb",
             "color2":"#ebf6ff",
-            "color3":"#99d2b1",
-            "color4":"#9d9d9d",
-            "color5":"#313131",
-            "color6":"#7ab8ec",
-            "color7":"#7ab8ec"
+            "color3":"#419EF7",
+            "color4":"#313131",
+            "color5":"#737373",
+            "color6":"#E2EAF2",
+            "color7":"#ffffff"
         },
         "Swatch 2": {
-            "color1":"#ffffff",
-            "color2":"#fff5f1",
-            "color3":"#575d61",
-            "color4":"#858585",
-            "color5":"#313131",
-            "color6":"#f29771",
-            "color7":"#f29771"
+            "color1":"#ebebeb",
+            "color2":"#ebf6ff",
+            "color3":"#D93030",
+            "color4":"#313131",
+            "color5":"#737373",
+            "color6":"#E2EAF2",
+            "color7":"#ffffff"
         },
         "Swatch 3": {
-            "color1":"#ffffff",
-            "color2":"#fef5f5",
-            "color3":"#ffd464",
-            "color4":"#9d9d9d",
-            "color5":"#313131",
-            "color6":"#ff6861",
-            "color7":"#ff6861"
+            "color1":"#ebebeb",
+            "color2":"#ebf6ff",
+            "color3":"#0E0F2E",
+            "color4":"#313131",
+            "color5":"#737373",
+            "color6":"#E2EAF2",
+            "color7":"#ffffff"
         },
         "Swatch 4": {
-            "color1":"#ffffff",
-            "color2":"#f2fafb",
-            "color3":"#f6b8d2",
-            "color4":"#9d9d9d",
-            "color5":"#313131",
-            "color6":"#acdee1",
-            "color7":"#acdee1"
+            "color1":"#ebebeb",
+            "color2":"#ebf6ff",
+            "color3":"#657264",
+            "color4":"#313131",
+            "color5":"#737373",
+            "color6":"#E2EAF2",
+            "color7":"#ffffff"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#f7f3f1",
-            "color3":"#f5927e",
-            "color4":"#9d9d9d",
-            "color5":"#313131",
-            "color6":"#b39e94",
-            "color7":"#b39e94"
+            "color1":"#ebebeb",
+            "color2":"#ebf6ff",
+            "color3":"#563D60",
+            "color4":"#313131",
+            "color5":"#737373",
+            "color6":"#E2EAF2",
+            "color7":"#ffffff"
         }
     },
     "fontSwatch": {
@@ -115,20 +115,20 @@
         "font6": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
             "font-size": "14px",
-            "font-weight": "200",
+            "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch6",
-            "color-hover": "darken(@color-swatch6,8%)",
-            "letter-spacing": "inherit",
+            "color-hover": "lighten(@color-swatch6,100%)",
+            "letter-spacing": "1px",
             "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3,8%)"
+            "background-color-hover": "lighten(@color-swatch6,100%)"
         },
         "font7": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
-            "font-size": "16px",
+            "font-size": "13px",
             "font-weight": "inherit",
-            "line-height": "26px",
-            "color": "@color-swatch1",
+            "line-height": "23px",
+            "color": "@color-swatch7",
             "letter-spacing": "1px",
             "background-color": "@color-swatch3",
             "background-color-hover": "darken(@color-swatch3,5%)"
@@ -137,16 +137,16 @@
             "font-family": "\"Arvo\", Georgia, serif",
             "font-size": "30px",
             "font-weight": "500",
-            "line-height": "40px",
-            "color": "@color-swatch1",
+            "line-height": "38px",
+            "color": "@color-swatch7",
             "letter-spacing": "inherit"
         },
         "font9": {
             "font-family": "\"Arvo\", Georgia, serif",
             "font-size": "20px",
             "font-weight": "500",
-            "line-height": "36px",
-            "color": "@color-swatch1",
+            "line-height": "28px",
+            "color": "@color-swatch7",
             "letter-spacing": "inherit"
         },
         "font10": {
@@ -154,7 +154,7 @@
             "font-size": "34px",
             "font-weight": "400",
             "line-height": "38px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch7",
             "letter-spacing": "5px"
         }
     }
