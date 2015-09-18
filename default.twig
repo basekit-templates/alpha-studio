@@ -2,41 +2,37 @@
 
 {% block content %}
 
-<!-- Default Page Content -->
+<!-- Home Page Content -->
+<section class="page-content">
 
+	<!-- Navigation Bar -->
+	<div class="navigation-bar">
 
-<div class="default-page">
-
-	<div class="page-content">
-
-		{% include "includes/header.twig" %}
-
-		<!-- Navigation Bar -->
-		<div class="navigation-bar">
-
-			<div class="container">
-				{{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-			</div>
-
+		<div class="container">
+			{{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
 		</div>
-
-		<!-- Zone Content -->
-		<div class="zone-content">
-
-			<div class="container">
-				<!-- Main Widet Zone -->
-		   		{{zone('main')|raw}}
-			</div>
-
-		</div>
-
-		<!-- End Zone Content -->
-
-		{% include "includes/footer.twig" %}
 
 	</div>
 
-<!-- End Default Page Content -->
-</div>
+	<div class="template-feature">
+		{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true, "buttonText":"LOREM IPSUM"})|raw}}
+	</div>
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+
+		<div class="container">
+			<!-- Main Widet Zone -->
+	   		{{zone('main')|raw}}
+		</div>
+
+	</div>
+
+	<!-- End Zone Content -->
+
+   {% include "includes/footer.twig" %}
+
+</section>
+<!-- End Home Page Content -->
 
 {% endblock %}
