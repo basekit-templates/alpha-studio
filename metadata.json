@@ -176,9 +176,9 @@
             "color__p--text": "@color-swatch5"
         },
         "button": {
-            "color__button--background": "@color__primary",
+            "color__button--background": "@color__secondary",
             "color__button--background--hover": "darken(@color__primary, 10%)",
-            "color__button--text": "@color-swatch1"
+            "color__button--text": "@font-swatch7-color"
         },
         "header": {
             "color__header--background": "@color-swatch7"
@@ -188,37 +188,25 @@
         },
         "navigation": {
             "color__navigation--background": "@color-swatch2",
-            "color__navigation--text": "@color-swatch4",
-            "color__navigation--text--hover": "@color__primary",
-            "color__navigation--text--selected": "@color__primary",
+            "color__navigation--text": "@font-swatch6-color",
+            "color__navigation--text--hover": "@font-swatch6-color-hover",
+            "color__navigation--text--selected": "@font-swatch6-color-hover",
             "color__navigation-list--background": "@color-swatch2"
         },
         "feature": {
             "color__feature--background": "@color-swatch4",
-            "color__feature-content--background": "transparent",
-            "color__feature-headline--text": "@color-swatch6",
-            "color__feature-strapline--text": "@color-swatch6",
-            "color__feature-button--text": "@color-swatch6",
-            "color__feature-button--background": "@color__primary",
-            "color__feature-button--background--hover": "darken(@color__primary, 10%)"
+            "color__feature-content--background": "fade(#000000, 50%)",
+            "color__feature-headline--text": "@font-swatch8-color",
+            "color__feature-strapline--text": "@font-swatch9-color",
+            "color__feature-button--text": "@font-swatch7-color",
+            "color__feature-button--background": "@color__secondary",
+            "color__feature-button--background--hover": "darken(@color__secondary, 10%)"
         },
         "forms": {
-            "color__form--background": "transparent",
-            "color__form-legend--text": "@color-swatch3",
+            "color__form--background": "darken(@color-swatch1,5%)",
+            "color__form-legend--text": "@font-swatch3-color",
             "color__form-legend--background": "darken(@color-swatch1,9%)",
-            "color__form-label--text": "@color-swatch5"
-        },
-        "image": {
-            "color__image--background": "transparent",
-            "color__image-caption--background": "lighten(@color-swatch1, 5%)",
-            "color__image-title--text": "@color-swatch4",
-            "color__image-description--text": "@color-swatch4"
-        },
-        "gallery": {
-            "color__gallery--background": "lighten(@color-swatch1, 5%)",
-            "color__gallery-caption--background": "@color-swatch5",
-            "color__gallery-title--text": "lighten(@color-swatch1, 30%)",
-            "color__gallery-description--text": "lighten(@color-swatch1, 30%)"
+            "color__form-label--text": "@font-swatch5-color"
         },
         "slideshow": {
             "color__slideshow-caption--background": "@color-swatch5",
