@@ -1,12 +1,6 @@
-@import "@{templateLocal}/bk-v8-test.less";  // V8 Variable overrides
-
 // Template colour overrides
 body {
 	background-color: @color__body--background;
-}
-
-.template-content {
-	background-color: @color__container--background;
 }
 
 .company-link {
@@ -19,27 +13,22 @@ a {
 
 h1 {
 	color: @color__h1--text;
-	background-color: @color__h1--background;
 }
 
 h2 {
 	color: @color__h2--text;
-	background-color: @color__h2--background;
 }
 
 h3 {
 	color: @color__h3--text;
-	background-color: @color__h3--background;
 }
 
 h4 {
 	color: @color__h4--text;
-	background-color: @color__h4--background;
 }
 
 p {
-	color: @color__p--text;
-	background-color: @color__p--background;
+	color: @color__p--text
 }
 
 button,
@@ -59,23 +48,19 @@ button,
 	background-color: @color__footer--background;
 }
 
-#page-zones__template-widgets__image-sidebarimage {
-	background-color: @color__sidebar--background;
-}
-
 .extendednavigation {
 	background-color: @color__navigation--background;
-	&__navigation-body {
-		background-color: @color__navigation-list--background;
-	}
-	&__item-name.item-name {
-		color: @color__navigation-item--text;
+	.navigation-item .item-name {
+		color: @color__navigation--text;
 		&:hover {
-			color: @color__navigation-item--selected;
+			color: @color__navigation--text--hover;
 		}
 	}
-	&__navigation-item.selected {
-		color: @color__navigation-item--selected;
+	&__navigation-item.selected > .item-name {
+		color: @color__navigation--text--selected;
+	}
+	&__navigation-item--background {
+		background-color: @color__navigation-item--background;
 	}
 }
 
@@ -85,11 +70,9 @@ button,
 		background-color: @color__feature-content--background;
 	}
 	&__headline {
-		background-color: @color__feature-headline--background;
 		color: @color__feature-headline--text;
 	}
 	&__strapline {
-		background-color: @color__feature-strapline--background;
 		color: @color__feature-strapline--text;
 	}
 	&__button {
@@ -115,34 +98,7 @@ form,
 	}
 }
 
-.imagewidget {
-	background-color: @color__image--background;
-	&__caption {
-		background-color: @color__image-caption--background;
-	}
-	&__image-title {
-		color: @color__image-title--text;
-	}
-	&__image-description {
-		color: @color__image-description--text;
-	}
-}
-
-.gallery {
-	background-color: @color__gallery--background;
-	&__caption.caption {
-		background-color: @color__gallery-caption--background;
-	}
-	&__image-title.image-title {
-		color: @color__gallery-title--text;
-	}
-	&__image-description.image-description {
-		color: @color__gallery-description--text;
-	}
-}
-
 .responsiveslideshow {
-	background-color: @color__slideshow--background;
 	&__caption.caption {
 		background-color: @color__slideshow-caption--background;
 	}
@@ -154,7 +110,6 @@ form,
 	}
 	.button--pagination {
 		background-color: @color__slideshow-pagination-item--background;
-		color: @color__slideshow-pagination-item--background--selected;
 	}
 	.pagination-item.selected button.button--pagination {
 		background-color: @color__slideshow-pagination-item--background--selected;
@@ -168,15 +123,6 @@ form,
 	}
 	&__account-link {
 		color: @color__twitter-account-name--text;
-	}
-}
-
-.socialicons {
-	&__social-link {
-		background-color: @color__socialicons--icon--background;
-		&::before {
-			color: @color__socialicons--icon;
-		}
 	}
 }
 
@@ -197,7 +143,6 @@ form,
 		background-color: @color__blogpostlist-article--background;
 	}
 	&__title-link {
-		background-color: @color__blogpostlist-title--background;
 		color: @color__blogpostlist-title--text;
 	}
 }
@@ -208,61 +153,38 @@ form,
 		background-color: @color__blogpost-article--background;
 	}
 	&__post-title {
-		background-color: @color__blogpost-title--background;
 		color: @color__blogpost-title--text;
 	}
 }
 
 .ecomproductslist {
-	background-color: @color__ecomproductslist--background;
 	&__product-filters {
 		background-color: @color__ecomproductslist-filters--background;
 	}
 	&__legend.legend {
-		background-color: @color__ecomproductslist-legend--background;
 		color: @color__ecomproductslist-legend--text;
 	}
 	&__label.label {
 		color: @color__ecomproductslist-label--text;
 	}
-	&__product-list {
-		background-color: @color__ecomproductslist-product-list--background;
-	}
-	&__product-item {
-		background-color: @color__ecomproductslist-product-item--background;
-	}
 	&__product-item-title a {
-		background-color: @color__ecomproductslist-product-title--background;
 		color: @color__ecomproductslist-product-title--text;
 	}
 }
 
 .ecomproduct {
-	background-color: @color__ecomproduct--background;
-	&__image-link.image-link,
-	&__gallery-item.gallery-item {
-		background-color: @color__ecomproduct-images--background;
-	}
-	&__product-content {
-		background-color: @color__ecomproduct-content--background;
-	}
 	&__product-title {
-		background-color: @color__ecomproduct-title--background;
 		color: @color__ecomproduct-title--text;
 	}
 	&__product-price {
-		background-color: @color__ecomproduct-price--background;
 		color: @color__ecomproduct-price--text;
 	}
 	.form .legend {
 		background-color: transparent;
 	}
 }
+
 .ecombasket {
-	background-color: @color__ecombasket--background;
-	&__basket-list {
-		background-color: @color__ecombasket-list--background;
-	}
 	button.button {
 		background-color: @color__ecombasket-button--background;
 		color: @color__ecombasket-button--text;
@@ -270,10 +192,6 @@ form,
 			background-color: @color__ecombasket-button--background--hover;
 		}
 	}
-}
-
-.menusections {
-	background-color: @color__menusections--background;
 }
 
 .menu {
