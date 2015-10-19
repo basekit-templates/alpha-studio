@@ -2,7 +2,7 @@
     "name":"Alpha Studio",
     "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
-    "screenshot":"alphastudio-screenshot.jpg",
+    "screenshot":"alpha-studio-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
