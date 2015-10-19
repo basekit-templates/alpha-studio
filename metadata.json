@@ -239,7 +239,7 @@
             "color__blogsearch-label--text": "@color-swatch4",
             "color__blogpostlist--background": "transparent",
             "color__blogpostlist-article--background": "darken(@color-swatch1,5%)",
-            "color__blogpostlist-title--text": "@color__primary",
+            "color__blogpostlist-title--text": "@color__secondary",
             "color__blogpost--background": "transparent",
             "color__blogpost-article--background": "darken(@color-swatch1,5%)",
             "color__blogpost-title--text": "@color-swatch4"
@@ -248,7 +248,7 @@
             "color__ecomproductslist-filters--background": "transparent",
             "color__ecomproductslist-legend--text": "@color-swatch3",
             "color__ecomproductslist-label--text": "@color-swatch4",
-            "color__ecomproductslist-product-title--text": "@color__primary",
+            "color__ecomproductslist-product-title--text": "@color__secondary",
             "color__ecomproduct-title--text": "@font-swatch3-color",
             "color__ecomproduct-price--text": "@font-swatch3-color;=",
             "color__ecombasket-button--background": "@color__primary",
