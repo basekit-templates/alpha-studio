@@ -238,7 +238,7 @@
             "color__ecomproductslist-label--text": "@color-swatch4",
             "color__ecomproductslist-product-title--text": "@color__secondary",
             "color__ecomproduct-title--text": "@font-swatch3-color",
-            "color__ecomproduct-price--text": "@font-swatch3-color;=",
+            "color__ecomproduct-price--text": "@font-swatch3-color",
             "color__ecombasket-button--background": "@color__primary",
             "color__ecombasket-button--background--hover": "darken(@color__primary, 10%)",
             "color__ecombasket-button--text": "@font-swatch7-color"
