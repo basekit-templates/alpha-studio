@@ -18,13 +18,19 @@
 	<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
 	<script src="{{ asset('js/fastclick.js')}}"></script>
 
+    <script src="{{ asset('js/jquery.okaynav.js')}}"></script>
+
+        <script type="text/javascript">
+            var navigation = $('.navigation-body').okayNav();
+        </script>
+
 	<!-- Nav Menu Script -->
 	<script>
 		$(function() {
 		    FastClick.attach(document.body);
 		});
 
-    	$( ".navigation-toggle" ).append( "<div class='bar one'></div><div class='bar two'></div><div class='bar three'></div>" ); 
+    	$( ".navigation-toggle" ).append( "<div class='bar one'></div><div class='bar two'></div><div class='bar three'></div>" );
 
     	// Toggles class open to display/hide the whole navigation
     	$( ".navigation-toggle" ).click(function() {
@@ -35,7 +41,7 @@
 		$( ".navigation-item.folder" ).each(function() {
 			$( this ).click(function() {
 	  			$( this ).toggleClass( "open" );
-			});	
+			});
 		});
 
 	</script>
